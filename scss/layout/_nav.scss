@@ -1,0 +1,54 @@
+#nav {
+  li {
+    position: relative;
+  }
+
+  > li {
+    display: inline-block;
+
+    > a {
+      color: $color-white;
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+  }
+
+  .subnav {
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: $color-white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    li {
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      color: #000;
+      padding: 0 16px;
+      line-height: 38px;
+    }
+  }
+
+  li:hover .subnav {
+    display: block;
+  }
+
+  .subnav li:hover a,
+  > li:hover > a {
+    color: $color-white;
+    background-color: $color-gray-300;
+  }
+}
